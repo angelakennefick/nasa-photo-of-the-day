@@ -4,57 +4,9 @@ import "./App.css";
 
 import styled, { keyframes } from 'styled-components'
 
-const KFC = keyframes`
-    100% {
-        opacity: 1;
-    }
-    `
-  const rocket1 = keyframes`
-  from {
-    transform: translate3d(0);
-   }
- 
-   to {
-    transform: translate3d(-2.7rem, 0, 1rem);
-   }
- `
- const rocket2 = keyframes`
-  from {
-    transform: translate3d(-2.7rem, 0, 1rem);
-   }
- 
-   to {
-    transform: translate3d(5ch, 0.4in, 5em);
-   }
- `
-  const rocket3 = keyframes`
-  from {
-    transform: translate3d(5ch, 0.4in, 5em);
-    }
 
-    to {
-      transform: translate3d(-2rem, 0, 1rem);
-    }
-  `
-  const rocket4 = keyframes`
-  from {
-    transform: translate3d(-2rem, 0, 1rem);
-    }
 
-    to {
-      transform: translate3d(4ch, 0.5in, 4em);
-    }
-  `
-  const rocket5 = keyframes`
-  from {
-    transform: translate3d(4ch, 0.5in, 4em);
-    }
-
-    to {
-      transform: translate3d(0);
-    }
-  `
-  const rocket6 = keyframes`
+  const rocket2 = keyframes`
   from {
     transform: translate3d(0);
     }
@@ -64,9 +16,20 @@ const KFC = keyframes`
     }
   `
   
-const StyledStuff = styled.div`
+const RocketStyle = styled.div`
+   
+    
+    animation: ${rocket2} 2s ease-in;
 
-`
+    
+`;
+// class MyReactNativeComponent extends React.Component {
+//   render() {
+//     return(
+//       <RocketStyle><span role="img" aria-label='go!'>🚀</span></RocketStyle>
+//     )
+//   }
+// }
 
 function App() {
   // const API_ID = "";
@@ -86,11 +49,13 @@ function App() {
     setNasaData(data);
   }
   return (
-    <StyledStuff>
+    
       <div className="App">
         <div className="header">
           <h1>
-            NASA Photo of the Day <span role="img" aria-label='go!'>🚀</span>
+            NASA Photo of the Day 
+            {<RocketStyle><span role="img" aria-label='go!'>🚀</span>
+            </RocketStyle>}
           </h1>
           {<PhotoOfTheDay 
           // key= {nasaData.title}
@@ -109,7 +74,7 @@ function App() {
         />}
       </div>
       </div>
-    </StyledStuff>
+    
   );  
 }
 
