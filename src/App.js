@@ -10,16 +10,19 @@ import styled, { keyframes } from 'styled-components'
   from {
     transform: translate3d(0);
     }
+  33% {
+    transform: translate3d(-3rem, 1rem, 1rem);
+  }
 
     to {
-      transform: translate3d(1000px, -100px, 1000px);
+      transform: translate3d(1000px, -200px, 1000px);
     }
   `
   
 const RocketStyle = styled.div`
    
     
-    animation: ${rocket2} 2s ease-in;
+    animation: ${rocket2} 3s ease-in;
 
     
 `;
