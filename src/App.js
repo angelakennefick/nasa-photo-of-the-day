@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
 import PhotoOfTheDay from './PhotoOfTheDay.js';
-import "./App.css";
+// import "./App.css";
 
 import styled, { keyframes } from 'styled-components'
 
 
 
-  const rocket2 = keyframes`
+  const rocketGo = keyframes`
   from {
     transform: translate3d(0);
     }
@@ -20,20 +20,71 @@ import styled, { keyframes } from 'styled-components'
   `
   
 const RocketStyle = styled.div`
-   
-    
-    animation: ${rocket2} 3s ease-in;
+    animation: ${rocketGo} 3s ease-in;
 
-    
 `;
-// class MyReactNativeComponent extends React.Component {
-//   render() {
-//     return(
-//       <RocketStyle><span role="img" aria-label='go!'>🚀</span></RocketStyle>
-//     )
-//   }
-// }
 
+const FancyStyle = styled.div`
+.App {
+  text-align: center;
+  background-image: linear-gradient(to top, hsl(224, 49%, 37%) 80%, #330867 100%);
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header, .explanation {
+  color:lightgrey;
+ 
+} 
+
+.explanation {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 150%);
+}
+
+
+img{
+  max-width: 100%;
+  height: auto;
+  
+}
+
+
+`;
+ 
 function App() {
   // const API_ID = "";
   const API_KEY = "qaK0zo9ddCy0RVChjIh0GIJ37ZpF4FNLluLnZxxe";
@@ -52,7 +103,7 @@ function App() {
     setNasaData(data);
   }
   return (
-    
+    <FancyStyle>
       <div className="App">
         <div className="header">
           <h1>
@@ -77,7 +128,7 @@ function App() {
         />}
       </div>
       </div>
-    
+    </FancyStyle>
   );  
 }
 

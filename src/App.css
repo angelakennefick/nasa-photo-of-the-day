@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-  /* background-image: linear-gradient(to top, #330867 50%, #30cfd0 50%); */
+
   background-image: linear-gradient(to top, hsl(224, 49%, 37%) 80%, #330867 100%);
 }
 
@@ -41,9 +41,9 @@
 }
 
 .header, .explanation {
-  color:lightgrey;
- /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);*/
-} 
+  color:lightgrey; */
+
+/* } 
 
 .explanation {
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 150%);
@@ -54,4 +54,4 @@ img{
   max-width: 100%;
   height: auto;
   
-}
+} */
